@@ -1,0 +1,10 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2f7bff"/><stop offset="1" stop-color="#5fe0e0"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4 L56 14 V30 C56 45 45.6 55.6 32 60 C18.4 55.6 8 45 8 30 V14 Z" fill="url(#shieldGrad)"/>
+  <circle cx="32" cy="30" r="9" fill="#f6f9ff"/>
+  <circle cx="32" cy="30" r="3.4" fill="#1c4fd6"/>
+</svg>

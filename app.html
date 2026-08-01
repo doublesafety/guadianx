@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guardian X — AI That Watches the Road Ahead</title>
+	<link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+
+	<!-- =========================================================
+	NAV
+	========================================================= -->
+	<nav class="gx-nav">
+	  <div class="gx-brand">
+		<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M16 2 L28 7 V15 C28 22.5 22.8 27.8 16 30 C9.2 27.8 4 22.5 4 15 V7 Z" fill="url(#navShieldGrad)"/>
+		  <circle cx="16" cy="15" r="4.2" fill="#f6f9ff"/>
+		  <circle cx="16" cy="15" r="1.6" fill="#1c4fd6"/>
+		  <defs>
+			<linearGradient id="navShieldGrad" x1="4" y1="2" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+			  <stop stop-color="#2f7bff"/>
+			  <stop offset="1" stop-color="#5fe0e0"/>
+			</linearGradient>
+		  </defs>
+		</svg>
+	  </div>
+	</nav>
+
+	<!-- =========================================================
+	HERO
+	========================================================= -->
+	<header class="gx-hero">
+	  <div class="gx-hero-eyebrow"><span class="dot"></span> AI Personal Safety, Live On Your Route</div>
+	  <h1>GX sees<br><em>what's ahead</em> — before you do.</h1>
+	  <p>Guardian X reads the road in front of you in real time, flags danger before you reach it, and quietly reroutes you somewhere safer. Scroll to see one ordinary walk, protected.</p>
+	  <div class="gx-hero-actions">
+		<a href="#gxStage" class="gx-btn-primary">Watch it protect a walk</a>
+		<a href="#features" class="gx-btn-secondary">Explore features</a>
+	  </div>
+	  <div class="gx-scrollcue"><span>Scroll</span><span class="stem"></span></div>
+	</header>
+
+	<!-- =========================================================
+	STORY — pinned cinematic scroll section
+	========================================================= -->
+	<section class="gx-stage" id="gxStage">
+	  <div class="gx-scene" id="gxScene">
+
+		<div class="gx-world" id="gxWorld">
+
+		  <!-- sky -->
+		  <div class="gx-sun"></div>
+
+		  <div class="gx-cloud gx-cloud--1"><svg viewBox="0 0 200 90"><path d="M30 65 a24 24 0 0 1 4-47 a30 30 0 0 1 56-10 a26 26 0 0 1 38 24 a20 20 0 0 1 -4 40 H34 a20 20 0 0 1 -4-7Z" fill="#ffffff" fill-opacity="0.9"/></svg></div>
+		  <div class="gx-cloud gx-cloud--2"><svg viewBox="0 0 200 90"><path d="M30 65 a24 24 0 0 1 4-47 a30 30 0 0 1 56-10 a26 26 0 0 1 38 24 a20 20 0 0 1 -4 40 H34 a20 20 0 0 1 -4-7Z" fill="#ffffff" fill-opacity="0.85"/></svg></div>
+		  <div class="gx-cloud gx-cloud--3"><svg viewBox="0 0 200 90"><path d="M30 65 a24 24 0 0 1 4-47 a30 30 0 0 1 56-10 a26 26 0 0 1 38 24 a20 20 0 0 1 -4 40 H34 a20 20 0 0 1 -4-7Z" fill="#ffffff" fill-opacity="0.8"/></svg></div>
+
+		  <!-- city skyline, far parallax -->
+		  <div class="gx-city-layer gx-city-layer--far" id="cityFar"></div>
+		  <!-- city skyline, near parallax -->
+		  <div class="gx-city-layer gx-city-layer--near" id="cityNear"></div>
+
+		  <!-- road -->
+		  <div class="gx-road">
+			<div class="gx-road-markings" id="roadMarkings"></div>
+		  </div>
+		  <div class="gx-sidewalk"></div>
+
+		  <!-- trees + streetlights -->
+		  <div class="gx-props-layer" id="propsLayer"></div>
+
+		  <!-- cars -->
+		  <div class="gx-cars-layer" id="carsLayer"></div>
+
+		  <!-- route lines (old + new) -->
+		  <svg class="gx-route-svg" id="routeSvg" viewBox="0 0 1600 120" preserveAspectRatio="none">
+			<defs>
+			  <linearGradient id="gxRouteGradient" x1="0" y1="0" x2="1" y2="0">
+				<stop offset="0%" stop-color="#2f7bff"/>
+				<stop offset="100%" stop-color="#5fe0e0"/>
+			  </linearGradient>
+			</defs>
+			<path class="gx-route-old" id="routeOld" d="M0,66 Q 400,60 800,66 T 1600,66"></path>
+			<path class="gx-route-new" id="routeNew" d="M0,66 Q 400,20 800,34 T 1600,60"></path>
+		  </svg>
+
+		  <!-- foresight sweep (signature element) -->
+		  <div class="gx-sweep" id="gxSweep"></div>
+
+		  <!-- danger zone -->
+		  <div class="gx-danger" id="gxDanger">
+			<div class="gx-danger-ring"></div>
+			<div class="gx-danger-ring gx-danger-ring--2"></div>
+			<div class="gx-danger-ring gx-danger-ring--3"></div>
+			<div class="gx-danger-mark">
+			  <svg viewBox="0 0 44 44" fill="none">
+				<circle cx="22" cy="22" r="21" fill="url(#dangerGrad)"/>
+				<path d="M22 12 L22 25" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+				<circle cx="22" cy="31" r="1.8" fill="#fff"/>
+				<defs>
+				  <radialGradient id="dangerGrad" cx="0.35" cy="0.3" r="0.9">
+					<stop stop-color="#ff5c66"/>
+					<stop offset="1" stop-color="#c8121d"/>
+				  </radialGradient>
+				</defs>
+			  </svg>
+			</div>
+		  </div>
+
+		  <!-- destination marker -->
+		  <div class="gx-destination" id="gxDestination">
+			<svg viewBox="0 0 54 66" fill="none">
+			  <path d="M27 2 C13 2 3 12.5 3 25.5 C3 41 27 64 27 64 C27 64 51 41 51 25.5 C51 12.5 41 2 27 2 Z" fill="url(#destGrad)"/>
+			  <circle cx="27" cy="25" r="10" fill="#f6f9ff"/>
+			  <path d="M22 25.5 L25.5 29 L33 20.5" stroke="#1c4fd6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+			  <defs>
+				<linearGradient id="destGrad" x1="3" y1="2" x2="51" y2="64" gradientUnits="userSpaceOnUse">
+				  <stop stop-color="#2f7bff"/><stop offset="1" stop-color="#5fe0e0"/>
+				</linearGradient>
+			  </defs>
+			</svg>
+		  </div>
+
+		  <!-- ===================== WALKER ===================== -->
+		  <div class="gx-walker-wrap">
+			<div class="gx-walker-shadow"></div>
+			<div class="gx-walker is-walking" id="gxWalker">
+			  <svg viewBox="0 0 104 130" width="100%" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+				  <linearGradient id="jacketGrad" x1="35" y1="34" x2="69" y2="68" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#33415c"/><stop offset="1" stop-color="#212c42"/>
+				  </linearGradient>
+				  <linearGradient id="skinGrad" x1="40" y1="6" x2="64" y2="30" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#e8b48c"/><stop offset="1" stop-color="#d69c74"/>
+				  </linearGradient>
+				  <linearGradient id="hairGrad" x1="38" y1="4" x2="66" y2="30" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#3a2a22"/><stop offset="1" stop-color="#241811"/>
+				  </linearGradient>
+				  <linearGradient id="pantsGrad" x1="37" y1="80" x2="67" y2="126" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#4a5468"/><stop offset="1" stop-color="#333c4c"/>
+				  </linearGradient>
+				  <linearGradient id="packGrad" x1="32" y1="38" x2="44" y2="66" gradientUnits="userSpaceOnUse">
+					<stop stop-color="#6f7d55"/><stop offset="1" stop-color="#4f5c3c"/>
+				  </linearGradient>
+				</defs>
+
+				<g class="gx-walk-bob">
+
+				  <!-- back arm (behind torso) -->
+				  <g id="armBack">
+					<rect x="58" y="42" width="9" height="32" rx="4.5" fill="url(#jacketGrad)"/>
+					<circle cx="62.5" cy="75" r="4.6" fill="url(#skinGrad)"/>
+				  </g>
+
+				  <!-- back leg -->
+				  <g id="legBack">
+					<rect x="54" y="80" width="9.5" height="34" rx="4.5" fill="url(#pantsGrad)"/>
+					<path d="M53 111 h13 a4 4 0 0 1 4 4 v2 a3 3 0 0 1 -3 3 h-17 a3 3 0 0 1 -1-5.8 Z" fill="#eef1f7"/>
+				  </g>
+
+				  <!-- backpack -->
+				  <rect x="30" y="38" width="13" height="30" rx="6" fill="url(#packGrad)"/>
+				  <rect x="41" y="40" width="3" height="18" rx="1.5" fill="#3d4630"/>
+
+				  <!-- pelvis -->
+				  <rect x="37" y="64" width="30" height="18" rx="9" fill="url(#pantsGrad)"/>
+
+				  <!-- torso / jacket -->
+				  <rect x="35" y="34" width="34" height="34" rx="15" fill="url(#jacketGrad)"/>
+				  <path d="M52 36 L46 46 L52 42 L58 46 Z" fill="#4c5b7c"/>
+				  <rect x="36" y="52" width="32" height="3" rx="1.5" fill="#1c2436" opacity="0.4"/>
+
+				  <!-- neck + head -->
+				  <rect x="47" y="27" width="10" height="10" rx="4" fill="url(#skinGrad)"/>
+				  <circle cx="52" cy="18" r="12" fill="url(#skinGrad)"/>
+
+				  <!-- hair -->
+				  <g id="hairSway">
+					<path d="M40 16 C40 6 46 2 52 2 C60 2 65 7 65 15 C65 12 61 9 58 10 C57 6 53 5 50 7 C45 6 42 10 42 15 C42 17 41 18 40 19 Z" fill="url(#hairGrad)"/>
+				  </g>
+
+				  <!-- front leg -->
+				  <g id="legFront">
+					<rect x="41" y="80" width="9.5" height="36" rx="4.5" fill="url(#pantsGrad)"/>
+					<path d="M40 113 h13 a4 4 0 0 1 4 4 v2 a3 3 0 0 1 -3 3 h-17 a3 3 0 0 1 -1-5.8 Z" fill="#ffffff"/>
+				  </g>
+
+				  <!-- front arm holding phone -->
+				  <g id="armFront">
+					<rect x="36" y="42" width="9" height="34" rx="4.5" fill="url(#jacketGrad)"/>
+					<circle cx="40.5" cy="77" r="4.8" fill="url(#skinGrad)"/>
+					<!-- phone, nested so it inherits arm rotation -->
+					<g id="phoneGroup" transform="translate(33.5,68) rotate(6)">
+					  <rect id="phoneGlow" x="-6" y="-6" width="22" height="34" rx="10" fill="#5fe0e0" opacity="0" filter="blur(4px)"/>
+					  <rect x="0" y="0" width="11" height="22" rx="2.6" fill="#12161f"/>
+					  <rect id="phoneScreen" x="1.3" y="1.6" width="8.4" height="18.8" rx="1.4" fill="#3a4457"/>
+					</g>
+				  </g>
+
+				</g>
+			  </svg>
+			</div>
+		  </div>
+		  <!-- =================== END WALKER =================== -->
+
+		</div><!-- /gxWorld -->
+
+		<!-- notification -->
+		<div class="gx-notification" id="gxNotification">
+		  <div class="gx-notification-head">
+			<div class="gx-notification-icon">
+			  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L21 6 V11 C21 16.5 17.2 20.8 12 22 C6.8 20.8 3 16.5 3 11 V6 Z" fill="#0b1220"/></svg>
+			</div>
+			<span class="gx-notification-title">Guardian X</span>
+			<span class="gx-notification-time">now</span>
+		  </div>
+		  <div class="gx-notification-body">Danger detected ahead</div>
+		  <div class="gx-notification-meta">
+			<svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L21 6 V11 C21 16.5 17.2 20.8 12 22 C6.8 20.8 3 16.5 3 11 V6 Z" stroke="currentColor" stroke-width="2"/></svg>
+			420 meters ahead · elevated risk
+		  </div>
+		</div>
+
+		<!-- guardian AI card -->
+		<div class="gx-ai-card" id="gxAiCard">
+		  <div class="gx-ai-head">
+			<div class="gx-ai-badge">
+			  <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L21 6 V11 C21 16.5 17.2 20.8 12 22 C6.8 20.8 3 16.5 3 11 V6 Z" fill="#0b1220"/></svg>
+			</div>
+			<div class="gx-ai-headtext">
+			  <strong>Guardian AI</strong>
+			  <span>Analysing live conditions</span>
+			</div>
+		  </div>
+		  <div class="gx-ai-line" id="gxAiTyping"><span class="caret"></span></div>
+		  <div class="gx-ai-grid">
+			<div class="gx-ai-stat gx-ai-stat--risk"><b>High</b><span>Risk level</span></div>
+			<div class="gx-ai-stat gx-ai-stat--confidence"><b>96%</b><span>Confidence</span></div>
+			<div class="gx-ai-stat"><b>+4 min</b><span>Extra time</span></div>
+			<div class="gx-ai-stat"><b>310 m</b><span>DB</span></div>
+		  </div>
+		  <div class="gx-ai-foot"><span>Reason: bandit threat</span> <em>Rerouting →</em></div>
+		</div>
+
+		<div class="gx-vignette"></div>
+
+		<!-- success overlay -->
+		<div class="gx-success" id="gxSuccess">
+		  <div class="gx-success-card">
+			<div class="gx-success-icon">
+			  <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5 L9.5 18 L20 6" stroke="#1c4fd6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+			</div>
+			<b>Guardian X</b>
+			<p>JOURNEY PROTECTED</p>
+		  </div>
+		</div>
+
+	  </div><!-- /gxScene -->
+	</section><!-- /gxStage -->
+
+	<!-- =========================================================
+	CLOSING / FEATURES
+	========================================================= -->
+	<section class="gx-closing" id="features">
+	  <div class="gx-closing-eyebrow">Always watching, never intrusive</div>
+	  <h2>One quiet layer of intelligence over every route you take.</h2>
+
+	  <div class="gx-features">
+		<div class="gx-feature">
+		  <div class="gx-feature-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" fill="#fff"/><path d="M12 3 V6.5 M12 17.5 V21 M3 12 H6.5 M17.5 12 H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
+		  <h3>Ahead-of-time risk detection</h3>
+		  <p>Guardian X continuously reads conditions along your path — lighting, recent incident reports — and flags risk before you're anywhere near it.</p>
+		</div>
+		<div class="gx-feature">
+		  <div class="gx-feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18 C4 18 8 8 12 8 C16 8 20 18 20 18" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="12" cy="8" r="2.4" fill="#fff"/></svg></div>
+		  <h3>Instant, explainable rerouting</h3>
+		  <p>Every alternate route comes with a plain-language reason and a confidence score, so you always know why Guardian X is asking you to turn.</p>
+		</div>
+		<div class="gx-feature">
+		  <div class="gx-feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 L21 6 V11 C21 16.5 17.2 20.8 12 22 C6.8 20.8 3 16.5 3 11 V6 Z" fill="#fff"/></svg></div>
+		  <h3>Protection that stays out of the way</h3>
+		  <p>No constant check-ins, no noise. Guardian X speaks up only when it matters, then quietly confirms you've arrived safely.</p>
+		</div>
+	  </div>
+
+	  <div class="gx-closing-actions">
+		<a href="#gxStage" class="gx-btn-primary">Get Guardian X</a>
+		<a href="#gxStage" class="gx-btn-secondary">See it in action again</a>
+	  </div>
+	</section>
+
+	
+	<script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usman Saleh — Founder of Guardian X</title>
+
+    <meta
+	  name="description"
+	  content="Official profile of Usman Saleh, founder and software developer behind Guardian X."
+    >
+
+<style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f7f9fc;
+            --surface: #ffffff;
+            --text: #142033;
+            --muted: #728096;
+            --line: #e4e9f0;
+            --accent: #155eef;
+            --accent-soft: #edf4ff;
+            --dark: #0d1728;
+            --success: #16a36a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            width: min(1120px, calc(100% - 36px));
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav {
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-weight: 850;
+            letter-spacing: -.04em;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 10px;
+
+            background: var(--dark);
+            color: white;
+
+            font-size: 12px;
+        }
+
+        .back {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 650;
+
+            transition: .25s;
+        }
+
+        .back:hover {
+            color: var(--accent);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 82px 0 75px;
+
+            display: grid;
+            grid-template-columns: 250px 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .portrait-wrap {
+            position: relative;
+        }
+
+        .portrait {
+            width: 230px;
+            height: 270px;
+
+            display: block;
+
+            object-fit: cover;
+
+            border-radius: 28px;
+
+            background: #e9eef5;
+
+            border: 1px solid var(--line);
+
+            box-shadow:
+                0 30px 70px rgba(22, 35, 55, .12);
+        }
+
+        .status {
+            position: absolute;
+
+            bottom: -12px;
+            left: 20px;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 8px 12px;
+
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-radius: 30px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            box-shadow:
+                0 10px 30px rgba(22, 35, 55, .08);
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--success);
+        }
+
+        .eyebrow {
+            color: var(--accent);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: .13em;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin-top: 12px;
+
+            font-size: clamp(42px, 7vw, 76px);
+
+            line-height: .95;
+
+            letter-spacing: -.065em;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .role {
+            margin-top: 18px;
+
+            font-size: 17px;
+
+            color: var(--muted);
+
+            font-weight: 600;
+        }
+
+        .intro {
+            max-width: 650px;
+
+            margin-top: 22px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           QUICK INFORMATION
+        ========================= */
+
+        .quick-info {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-top: 32px;
+        }
+
+        .info-box {
+            padding: 17px;
+
+            border: 1px solid var(--line);
+
+            background: var(--surface);
+
+            border-radius: 15px;
+        }
+
+        .info-box small {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: .08em;
+
+            text-transform: uppercase;
+        }
+
+        .info-box strong {
+            display: block;
+
+            margin-top: 5px;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .content {
+            display: grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap: 22px;
+
+            padding-bottom: 90px;
+        }
+
+        .card {
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+
+            border-radius: 23px;
+
+            padding: 30px;
+        }
+
+        .card.full {
+            grid-column: 1 / -1;
+        }
+
+        .section-label {
+            color: var(--accent);
+
+            font-size: 9px;
+
+            font-weight: 850;
+
+            letter-spacing: .13em;
+
+            text-transform: uppercase;
+        }
+
+        .card h2 {
+            margin-top: 9px;
+
+            font-size: 25px;
+
+            letter-spacing: -.035em;
+
+            line-height: 1.15;
+        }
+
+        .card p {
+            margin-top: 15px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            margin-top: 25px;
+
+            border-left: 1px solid var(--line);
+
+            padding-left: 24px;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            margin-bottom: 28px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: var(--accent);
+
+            left: -29px;
+            top: 7px;
+        }
+
+        .timeline-year {
+            color: var(--accent);
+
+            font-size: 10px;
+
+            font-weight: 800;
+        }
+
+        .timeline-item h3 {
+            margin-top: 3px;
+
+            font-size: 15px;
+        }
+
+        .timeline-item p {
+            margin-top: 4px;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+        }
+
+        .skill {
+            padding: 9px 12px;
+
+            border-radius: 10px;
+
+            background: var(--accent-soft);
+
+            color: var(--accent);
+
+            font-size: 10px;
+
+            font-weight: 750;
+        }
+
+
+        /* =========================
+           GUARDIAN X
+        ========================= */
+
+        .guardian-card {
+            background: var(--dark);
+
+            color: white;
+
+            border-radius: 25px;
+
+            padding: 35px;
+        }
+
+        .guardian-card .section-label {
+            color: #8bb2ff;
+        }
+
+        .guardian-card h2 {
+            margin-top: 10px;
+
+            font-size: 31px;
+
+            letter-spacing: -.04em;
+        }
+
+        .guardian-card p {
+            color: #aebbd0;
+
+            max-width: 750px;
+        }
+
+        .guardian-link {
+            display: inline-flex;
+
+            margin-top: 23px;
+
+            padding: 11px 15px;
+
+            background: white;
+
+            color: var(--dark);
+
+            border-radius: 10px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================
+           VISION
+        ========================= */
+
+        .vision {
+            padding: 60px 0 90px;
+
+            text-align: center;
+        }
+
+        .vision h2 {
+            max-width: 800px;
+
+            margin: 12px auto 0;
+
+            font-size: clamp(30px, 5vw, 51px);
+
+            line-height: 1.03;
+
+            letter-spacing: -.055em;
+        }
+
+        .vision p {
+            max-width: 650px;
+
+            margin: 20px auto 0;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid var(--line);
+
+            padding: 25px 0 35px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 760px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+                padding: 55px 0;
+            }
+
+            .portrait {
+                width: 170px;
+                height: 200px;
+
+                border-radius: 22px;
+            }
+
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .card.full {
+                grid-column: auto;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+            }
+
+        }
+
+</style>
+  </head>
+
+
+  <body>
+
+	<div class="page">
+
+	  <!-- NAVIGATION -->
+
+	  <nav class="nav">
+
+        <a href="index.html" class="brand">
+
+		  <span class="brand-mark">
+			GX
+		  </span>
+
+		  Guardian X
+
+        </a>
+
+        <a href="index.html" class="back">
+		  ← Back to Guardian X
+        </a>
+
+	  </nav>
+
+
+	  <!-- HERO -->
+
+	  <header class="hero">
+
+        <div class="portrait-wrap">
+
+		  <!-- Replace with your actual image -->
+		  <img
+			src="assets/fu.png"
+			alt="Usman Saleh"
+			class="portrait"
+		  >
+
+		  <div class="status">
+			<span class="status-dot"></span>
+			Building Guardian X
+		  </div>
+
+        </div>
+
+
+        <div>
+
+		  <div class="eyebrow">
+			Guardian X · Founder Profile
+		  </div>
+
+		  <h1>
+			Usman <span>Saleh.</span>
+		  </h1>
+
+		  <div class="role">
+			Founder · Android Developer · Software Developer
+		  </div>
+
+		  <p class="intro">
+			Usman Saleh is the founder of Guardian X and a software
+			developer focused on building practical technology
+			solutions. His programming journey began in 2017,
+			developing experience across Android applications,
+			JavaScript, HTML and Node.js.
+		  </p>
+
+
+		  <div class="quick-info">
+
+			<div class="info-box">
+
+			  <small>
+				Current School
+			  </small>
+
+			  <strong>
+				Katsina State Institute of Technology and Management
+			  </strong>
+
+			</div>
+
+
+			<div class="info-box">
+
+			  <small>
+				Department
+			  </small>
+
+			  <strong>
+				Computer Science
+			  </strong>
+
+			</div>
+
+
+			<div class="info-box">
+
+			  <small>
+				Programming Since
+			  </small>
+
+			  <strong>
+				2017
+			  </strong>
+
+			</div>
+
+		  </div>
+
+        </div>
+
+	  </header>
+
+
+	  <!-- CONTENT -->
+
+	  <main class="content">
+
+
+        <!-- ABOUT -->
+
+        <section class="card">
+
+		  <div class="section-label">
+			About
+		  </div>
+
+		  <h2>
+			From learning code to building products.
+		  </h2>
+
+		  <p>
+			Usman Saleh began his programming journey in 2017.
+			Over time, he developed practical experience in
+			software development and particularly in building
+			Android applications.
+		  </p>
+
+		  <p>
+			His development experience has also expanded into
+			JavaScript, HTML and Node.js, giving him experience
+			across both mobile and web technologies.
+		  </p>
+
+        </section>
+
+
+        <!-- DEVELOPMENT JOURNEY -->
+
+        <section class="card">
+
+		  <div class="section-label">
+			Development Journey
+		  </div>
+
+		  <h2>
+			A growing software journey.
+		  </h2>
+
+		  <div class="timeline">
+
+			<div class="timeline-item">
+
+			  <div class="timeline-year">
+				2017
+			  </div>
+
+			  <h3>
+				Programming begins
+			  </h3>
+
+			  <p>
+				Started learning programming and developing
+				a foundation in software development.
+			  </p>
+
+			</div>
+
+
+			<div class="timeline-item">
+
+			  <div class="timeline-year">
+				Android Development
+			  </div>
+
+			  <h3>
+				Mobile application development
+			  </h3>
+
+			  <p>
+				Developed experience creating Android
+				applications and working with mobile
+				software development.
+			  </p>
+
+			</div>
+
+
+			<div class="timeline-item">
+
+			  <div class="timeline-year">
+				2023
+			  </div>
+
+			  <h3>
+				NewsTwist
+			  </h3>
+
+			  <p>
+				Developed NewsTwist, adding another milestone
+				to the software development journey.
+			  </p>
+
+			</div>
+
+
+			<div class="timeline-item">
+
+			  <div class="timeline-year">
+				Present
+			  </div>
+
+			  <h3>
+				Guardian X
+			  </h3>
+
+			  <p>
+				Building Guardian X as a safety-focused
+				technology project designed to explore
+				practical digital safety solutions.
+			  </p>
+
+			</div>
+
+		  </div>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="card full">
+
+		  <div class="section-label">
+			Education
+		  </div>
+
+		  <h2>
+			Computer Science & technology.
+		  </h2>
+
+		  <p>
+			Usman Saleh is currently studying Computer Science
+			at Katsina State Institute of Technology and
+			Management.
+		  </p>
+
+		  <div class="timeline">
+
+			<div class="timeline-item">
+
+			  <div class="timeline-year">
+				CURRENT
+			  </div>
+
+			  <h3>
+				Katsina State Institute of Technology and Management
+			  </h3>
+
+			  <p>
+				Department of Computer Science
+			  </p>
+
+			</div>
+
+		  </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+
+        <section class="card full">
+
+		  <div class="section-label">
+			Technical Skills
+		  </div>
+
+		  <h2>
+			Technologies I work with.
+		  </h2>
+
+		  <p>
+			Development experience built through practical
+			projects and continued learning.
+		  </p>
+
+		  <div class="skills">
+
+			<span class="skill">
+			  Java
+			</span>
+
+			<span class="skill">
+			  Android Development
+			</span>
+
+			<span class="skill">
+			  JavaScript
+			</span>
+
+			<span class="skill">
+			  HTML
+			</span>
+
+			<span class="skill">
+			  Node.js
+			</span>
+
+			<span class="skill">
+			  Software Development
+			</span>
+
+		  </div>
+
+        </section>
+
+
+        <!-- GUARDIAN X -->
+
+        <section class="guardian-card card full">
+
+		  <div class="section-label">
+			Current Project
+		  </div>
+
+		  <h2>
+			Guardian X
+		  </h2>
+
+		  <p>
+			Guardian X is a safety technology project focused
+			on developing practical tools that can help people
+			understand safety situations, assess destinations
+			and make more informed decisions.
+		  </p>
+
+		  <p>
+			As founder, Usman is responsible for the technical
+			development and direction of the project, including
+			Android application development and the broader
+			software vision.
+		  </p>
+
+		  <a href="index.html" class="guardian-link">
+			Explore Guardian X →
+		  </a>
+
+        </section>
+
+
+	  </main>
+
+
+	  <!-- VISION -->
+
+	  <section class="vision">
+
+        <div class="eyebrow">
+		  Long-Term Vision
+        </div>
+
+        <h2>
+		  Building technology that can make the world safer.
+        </h2>
+
+        <p>
+		  The long-term vision is to grow from software development
+		  into building a technology company focused on safety,
+		  intelligent software and practical technology solutions
+		  for people and communities.
+        </p>
+
+	  </section>
+
+
+	  <!-- FOOTER -->
+
+	  <footer>
+
+        <div class="footer-inner">
+
+		  <span>
+			© Guardian X
+		  </span>
+
+		  <span>
+			Usman Saleh · Founder
+		  </span>
+
+        </div>
+
+	  </footer>
+
+	</div>
+
+  </body>
+</html>

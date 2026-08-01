@@ -1,0 +1,14 @@
+<svg viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phoneBody" x1="0" y1="0" x2="60" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1b202b"/><stop offset="1" stop-color="#0b0e14"/>
+    </linearGradient>
+    <linearGradient id="phoneScreenGrad" x1="0" y1="0" x2="60" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2f7bff"/><stop offset="1" stop-color="#5fe0e0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="56" height="116" rx="14" fill="url(#phoneBody)"/>
+  <rect x="7" y="10" width="46" height="92" rx="4" fill="url(#phoneScreenGrad)" opacity="0.9"/>
+  <rect x="22" y="5" width="16" height="3" rx="1.5" fill="#0b0e14"/>
+  <circle cx="30" cy="111" r="3" fill="#2a2f3a"/>
+</svg>

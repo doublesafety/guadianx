@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ahmed Hussain — Guardian X</title>
+
+    <meta
+	  name="description"
+	  content="Official profile of Ahmed Hussain, Web Developer and Data Lead at Guardian X."
+    >
+
+<style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f7f9fc;
+            --surface: #ffffff;
+            --text: #142033;
+            --muted: #728096;
+            --line: #e4e9f0;
+            --accent: #155eef;
+            --accent-soft: #edf4ff;
+            --dark: #0d1728;
+            --success: #16a36a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            width: min(1120px, calc(100% - 36px));
+            margin: auto;
+        }
+
+
+        /* NAVIGATION */
+
+        .nav {
+            height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-weight: 850;
+            letter-spacing: -.04em;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 10px;
+
+            background: var(--dark);
+            color: white;
+
+            font-size: 12px;
+        }
+
+        .back {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 650;
+
+            transition: .25s;
+        }
+
+        .back:hover {
+            color: var(--accent);
+        }
+
+
+        /* HERO */
+
+        .hero {
+            padding: 82px 0 75px;
+
+            display: grid;
+            grid-template-columns: 250px 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .portrait-wrap {
+            position: relative;
+        }
+
+        .portrait {
+            width: 230px;
+            height: 270px;
+
+            display: block;
+
+            object-fit: cover;
+
+            border-radius: 28px;
+
+            background: #e9eef5;
+
+            border: 1px solid var(--line);
+
+            box-shadow:
+                0 30px 70px rgba(22, 35, 55, .12);
+        }
+
+        .status {
+            position: absolute;
+
+            bottom: -12px;
+            left: 20px;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            padding: 8px 12px;
+
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-radius: 30px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            box-shadow:
+                0 10px 30px rgba(22, 35, 55, .08);
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--success);
+        }
+
+        .eyebrow {
+            color: var(--accent);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: .13em;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin-top: 12px;
+
+            font-size: clamp(42px, 7vw, 76px);
+
+            line-height: .95;
+
+            letter-spacing: -.065em;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .role {
+            margin-top: 18px;
+
+            font-size: 17px;
+
+            color: var(--muted);
+
+            font-weight: 600;
+        }
+
+        .intro {
+            max-width: 650px;
+
+            margin-top: 22px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+        }
+
+
+        /* QUICK INFO */
+
+        .quick-info {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-top: 32px;
+        }
+
+        .info-box {
+            padding: 17px;
+
+            border: 1px solid var(--line);
+
+            background: var(--surface);
+
+            border-radius: 15px;
+        }
+
+        .info-box small {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: .08em;
+
+            text-transform: uppercase;
+        }
+
+        .info-box strong {
+            display: block;
+
+            margin-top: 5px;
+
+            font-size: 13px;
+        }
+
+
+        /* CONTENT */
+
+        .content {
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 22px;
+
+            padding-bottom: 90px;
+        }
+
+        .card {
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+
+            border-radius: 23px;
+
+            padding: 30px;
+        }
+
+        .card.full {
+            grid-column: 1 / -1;
+        }
+
+        .section-label {
+            color: var(--accent);
+
+            font-size: 9px;
+
+            font-weight: 850;
+
+            letter-spacing: .13em;
+
+            text-transform: uppercase;
+        }
+
+        .card h2 {
+            margin-top: 9px;
+
+            font-size: 25px;
+
+            letter-spacing: -.035em;
+
+            line-height: 1.15;
+        }
+
+        .card p {
+            margin-top: 15px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* EDUCATION */
+
+        .education-row {
+            margin-top: 25px;
+
+            padding: 20px;
+
+            background: #fafbfe;
+
+            border: 1px solid var(--line);
+
+            border-radius: 16px;
+        }
+
+        .education-row small {
+            color: var(--accent);
+
+            font-size: 9px;
+
+            font-weight: 850;
+
+            text-transform: uppercase;
+
+            letter-spacing: .1em;
+        }
+
+        .education-row h3 {
+            margin-top: 6px;
+
+            font-size: 16px;
+        }
+
+        .education-row p {
+            margin-top: 4px;
+
+            font-size: 11px;
+        }
+
+
+        /* EXPERTISE */
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+        }
+
+        .skill {
+            padding: 9px 12px;
+
+            border-radius: 10px;
+
+            background: var(--accent-soft);
+
+            color: var(--accent);
+
+            font-size: 10px;
+
+            font-weight: 750;
+        }
+
+
+        /* DATA LEAD */
+
+        .data-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .data-box {
+            padding: 20px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 16px;
+
+            background: #fafbfe;
+        }
+
+        .data-number {
+            font-size: 25px;
+
+            font-weight: 850;
+
+            color: var(--accent);
+
+            letter-spacing: -.04em;
+        }
+
+        .data-box strong {
+            display: block;
+
+            margin-top: 3px;
+
+            font-size: 11px;
+        }
+
+        .data-box p {
+            margin-top: 6px;
+
+            font-size: 10px;
+        }
+
+
+        /* GUARDIAN X */
+
+        .guardian-card {
+            background: var(--dark);
+
+            color: white;
+
+            border-radius: 25px;
+
+            padding: 35px;
+        }
+
+        .guardian-card .section-label {
+            color: #8bb2ff;
+        }
+
+        .guardian-card h2 {
+            margin-top: 10px;
+
+            font-size: 31px;
+
+            letter-spacing: -.04em;
+        }
+
+        .guardian-card p {
+            color: #aebbd0;
+
+            max-width: 750px;
+        }
+
+        .guardian-link {
+            display: inline-flex;
+
+            margin-top: 23px;
+
+            padding: 11px 15px;
+
+            background: white;
+
+            color: var(--dark);
+
+            border-radius: 10px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+        }
+
+
+        /* VISION */
+
+        .vision {
+            padding: 60px 0 90px;
+
+            text-align: center;
+        }
+
+        .vision h2 {
+            max-width: 800px;
+
+            margin: 12px auto 0;
+
+            font-size: clamp(30px, 5vw, 51px);
+
+            line-height: 1.03;
+
+            letter-spacing: -.055em;
+        }
+
+        .vision p {
+            max-width: 650px;
+
+            margin: 20px auto 0;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid var(--line);
+
+            padding: 25px 0 35px;
+
+            color: var(--muted);
+
+            font-size: 10px;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width: 760px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+                padding: 55px 0;
+            }
+
+            .portrait {
+                width: 170px;
+                height: 200px;
+
+                border-radius: 22px;
+            }
+
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .card.full {
+                grid-column: auto;
+            }
+
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+            }
+
+        }
+
+</style>
+  </head>
+
+
+  <body>
+
+	<div class="page">
+
+
+	  <!-- NAVIGATION -->
+
+	  <nav class="nav">
+
+        <a href="index.html" class="brand">
+
+		  <span class="brand-mark">
+			GX
+		  </span>
+
+		  Guardian X
+
+        </a>
+
+        <a href="index.html" class="back">
+		  ← Back to Guardian X
+        </a>
+
+	  </nav>
+
+
+	  <!-- HERO -->
+
+	  <header class="hero">
+
+        <div class="portrait-wrap">
+
+		  <img
+			src="assets/ahmed-hussain.jpg"
+			alt="Ahmed Hussain"
+			class="portrait"
+		  >
+
+		  <div class="status">
+
+			<span class="status-dot"></span>
+
+			Guardian X Team
+
+		  </div>
+
+        </div>
+
+
+        <div>
+
+		  <div class="eyebrow">
+			Guardian X · Team Profile
+		  </div>
+
+		  <h1>
+			Ahmed <span>Hussain.</span>
+		  </h1>
+
+		  <div class="role">
+			Web Developer · Data Lead
+		  </div>
+
+		  <p class="intro">
+			Ahmed Hussain is a member of the Guardian X team,
+			contributing to web development and leading the
+			data section of the project. He is also a Computer
+			Science student with strong expertise in Mathematics.
+		  </p>
+
+
+		  <div class="quick-info">
+
+			<div class="info-box">
+
+			  <small>
+				Education
+			  </small>
+
+			  <strong>
+				Computer Science
+			  </strong>
+
+			</div>
+
+
+			<div class="info-box">
+
+			  <small>
+				Institution
+			  </small>
+
+			  <strong>
+				Katsina State Institute of Technology and Management
+			  </strong>
+
+			</div>
+
+
+			<div class="info-box">
+
+			  <small>
+				Guardian X Role
+			  </small>
+
+			  <strong>
+				Web Developer & Data Lead
+			  </strong>
+
+			</div>
+
+		  </div>
+
+        </div>
+
+	  </header>
+
+
+	  <!-- MAIN CONTENT -->
+
+	  <main class="content">
+
+
+        <!-- ABOUT -->
+
+        <section class="card">
+
+		  <div class="section-label">
+			About
+		  </div>
+
+		  <h2>
+			Mathematics meets technology.
+		  </h2>
+
+		  <p>
+			Ahmed Hussain combines his Computer Science studies
+			with strong mathematical knowledge and practical
+			experience in web development.
+		  </p>
+
+		  <p>
+			His contribution to Guardian X focuses particularly
+			on the web platform and the data side of the project,
+			helping support the technology behind the wider
+			Guardian X ecosystem.
+		  </p>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="card">
+
+		  <div class="section-label">
+			Education
+		  </div>
+
+		  <h2>
+			Computer Science.
+		  </h2>
+
+		  <div class="education-row">
+
+			<small>
+			  Current Study
+			</small>
+
+			<h3>
+			  Katsina State Institute of Technology and Management
+			</h3>
+
+			<p>
+			  Department of Computer Science
+			</p>
+
+		  </div>
+
+        </section>
+
+
+        <!-- MATHEMATICS -->
+
+        <section class="card full">
+
+		  <div class="section-label">
+			Mathematics
+		  </div>
+
+		  <h2>
+			Analytical thinking behind the technology.
+		  </h2>
+
+		  <p>
+			Mathematics is one of Ahmed's areas of expertise.
+			This analytical foundation contributes to the way
+			he approaches technical problems, data and software
+			development.
+		  </p>
+
+        </section>
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <section class="card">
+
+		  <div class="section-label">
+			Expertise
+		  </div>
+
+		  <h2>
+			Technical capabilities.
+		  </h2>
+
+		  <p>
+			Ahmed's current areas of contribution include
+			web development and data-related work.
+		  </p>
+
+		  <div class="skills">
+
+			<span class="skill">
+			  Web Development
+			</span>
+
+			<span class="skill">
+			  Data
+			</span>
+
+			<span class="skill">
+			  Mathematics
+			</span>
+
+			<span class="skill">
+			  Computer Science
+			</span>
+
+		  </div>
+
+        </section>
+
+
+        <!-- DATA LEAD -->
+
+        <section class="card">
+
+		  <div class="section-label">
+			Data Lead
+		  </div>
+
+		  <h2>
+			Leading the data section.
+		  </h2>
+
+		  <p>
+			Ahmed leads the data section of Guardian X,
+			contributing to the organization and development
+			of the data-related side of the project.
+		  </p>
+
+        </section>
+
+
+        <!-- GUARDIAN X -->
+
+        <section class="guardian-card card full">
+
+		  <div class="section-label">
+			Guardian X
+		  </div>
+
+		  <h2>
+			Building the web and data side of Guardian X.
+		  </h2>
+
+		  <p>
+			As Web Developer and Data Lead, Ahmed contributes
+			to the technical infrastructure surrounding
+			Guardian X. His work supports the project's web
+			presence while leading the data-focused section
+			of the system.
+		  </p>
+
+		  <a
+			href="index.html"
+			class="guardian-link">
+
+			Explore Guardian X →
+
+		  </a>
+
+        </section>
+
+
+	  </main>
+
+
+	  <!-- VISION -->
+
+	  <section class="vision">
+
+        <div class="eyebrow">
+		  Team Contribution
+        </div>
+
+        <h2>
+		  Technology is stronger when different skills work together.
+        </h2>
+
+        <p>
+		  Ahmed's combination of mathematical thinking,
+		  Computer Science education, web development and
+		  data leadership contributes another important
+		  perspective to the Guardian X team.
+        </p>
+
+	  </section>
+
+
+	  <!-- FOOTER -->
+
+	  <footer>
+
+        <div class="footer-inner">
+
+		  <span>
+			© Guardian X
+		  </span>
+
+		  <span>
+			Ahmed Hussain · Web Developer & Data Lead
+		  </span>
+
+        </div>
+
+	  </footer>
+
+
+	</div>
+
+  </body>
+</html>

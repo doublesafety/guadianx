@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Guardian X — intelligent personal safety technology.">
+<title>Guardian X — Intelligent Personal Safety</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/founders.css">
+<link rel="stylesheet" href="assets/.css">
+  
+</head>
+<body>
+
+  
+<header class="header">
+<a class="brand" href="#top"><span>GX</span> Guardian X</a>
+<nav><a href="#product">Product</a><a href="#how">How it works</a><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#team">Team</a></nav>
+<a class="nav-btn" href="#download">Download</a>
+</header>
+
+<main id="top">
+<section class="hero">
+<div>
+<label>PERSONAL SAFETY TECHNOLOGY</label>
+<h1>Your safety.<br><i>Connected.</i> Intelligent.</h1>
+<p>Guardian X brings safety awareness, trusted communication, location intelligence and AI assistance together in one mobile platform.</p>
+<div class="actions"><a class="primary" href="#download">Download Guardian X ↗</a><a class="secondary" href="#how">See how it works</a></div>
+<div class="trust"><div><b>Safety-first</b><small>Designed around practical protection</small></div><div><b>Android</b><small>Built for everyday mobile use</small></div></div>
+</div>
+  <section id="appContainer"></section>
+
+<script>
+
+  async function loadApp(){
+
+    const html = await fetch("app.html").then(r=>r.text());
+
+    document.getElementById("appContainer").innerHTML = html;
+
+    // CSS
+    const css=document.createElement("link");
+    css.rel="stylesheet";
+    css.href="app.css";
+    document.head.appendChild(css);
+
+    // JS
+    const js=document.createElement("script");
+    js.src="app.js";
+    document.body.appendChild(js);
+
+}
+
+loadApp();
+
+</script>
+
+  <section class="gx-app-showcase" id="app-preview">
+
+    <div class="gx-app-bg-glow"></div>
+    <div class="gx-app-grid"></div>
+
+    <div class="gx-app-header">
+
+	  <div>
+		<span class="gx-mini-label">GUARDIAN X · ANDROID</span>
+
+		<h2>
+		  Your safety.
+		  <span>One screen away.</span>
+		</h2>
+	  </div>
+
+	  <p>
+		Explore the Guardian X experience through the real application
+		interface — designed to keep important safety information close
+		when it matters.
+	  </p>
+
+    </div>
+    <!-- MAIN PRODUCT VIEW -->
+
+    <div class="gx-product-stage">
+
+	  <!-- LEFT FLOATING CARD -->
+
+	  <div class="gx-floating-card gx-float-left">
+
+		<div class="gx-float-icon">⌖</div>
+
+		<div>
+		  <small>DESTINATION</small>
+		  <strong>Safety verification</strong>
+		  <span>Check before you move</span>
+		</div>
+
+		<i class="gx-live-dot"></i>
+
+	  </div>
+
+
+	  <!-- APP SCREEN -->
+
+	  <div class="gx-device-wrap">
+
+		<div class="gx-device-shadow"></div>
+
+		<div class="gx-device">
+
+		  <div class="gx-device-camera"></div>
+
+		  <div class="gx-device-screen">
+
+			<div class="gx-screen-slide active">
+			  <img
+				src="assets/guardian_x_home.png"
+				alt="Guardian X home screen"
+			  >
+			</div>
+
+			<div class="gx-screen-slide">
+			  <img
+				src="assets/ai.png"
+				alt="Guardian X destination verification"
+			  >
+			</div>
+
+			<div class="gx-screen-slide">
+			  <img
+				src="assets/place-security-check.png"
+				alt="Guardian X security check"
+			  >
+			</div>
+
+			<div class="gx-screen-slide">
+			  <img
+				src="assets/safety-guidance.png"
+				alt="Guardian X safety guidance"
+			  >
+			</div>
+
+		  </div>
+
+		</div>
+
+	  </div>
+
+
+	  <!-- RIGHT FLOATING CARD -->
+
+	  <div class="gx-floating-card gx-float-right">
+
+		<div class="gx-float-icon ai">✦</div>
+
+		<div>
+		  <small>GUARDIAN AI</small>
+		  <strong>Intelligent guidance</strong>
+		  <span>Understand your situation</span>
+		</div>
+
+		<div class="gx-ai-wave">
+		  <i></i>
+		  <i></i>
+		  <i></i>
+		  <i></i>
+		  <i></i>
+		</div>
+
+	  </div>
+
+
+	  <!-- DECORATIVE ORBIT -->
+
+	  <div class="gx-orbit orbit-one"></div>
+	  <div class="gx-orbit orbit-two"></div>
+
+    </div>
+
+
+    <!-- SLIDE CONTROLS -->
+
+    <div class="gx-slide-controls">
+
+    </div>
+
+
+    <div class="gx-app-caption">
+
+    </div>
+
+  </section>
+
+
+<section class="section" id="features">
+<label>CORE CAPABILITIES</label><h2>Designed as a <i>safety ecosystem.</i></h2>
+<div class="features">
+<article><b>01</b><span>⌖</span><h3>Safety awareness</h3><p>Present relevant safety context to help users make more informed decisions.</p></article>
+<article><b>02</b><span>✦</span><h3>Guardian AI</h3><p>An AI assistant designed to help users understand situations and safety-related information.</p></article>
+<article><b>03</b><span>◎</span><h3>Location sharing</h3><p>Consent-based location features for trusted people and safety coordination.</p></article>
+<article><b>04</b><span>♧</span><h3>Trusted groups</h3><p>Connect selected family, friends or trusted contacts around safety workflows.</p></article>
+<article><b>05</b><span>◉</span><h3>Communication</h3><p>Support direct communication for situations where staying connected matters.</p></article>
+<article><b>06</b><span>!</span><h3>Safety alerts</h3><p>Surface important notifications and help users react to changing conditions.</p></article>
+</div>
+</section>
+  <section class="gx-showcase" id="screens">
+    <div class="gx-section">
+
+	  <div class="gx-section-label">
+		<span class="gx-label-line"></span>
+		HOW GUARDIAN X THINKS
+	  </div>
+
+	  <div class="gx-showcase-heading">
+		<div>
+		  <h2>
+			From destination
+			<span>to safer decisions.</span>
+		  </h2>
+		</div>
+
+		<p>
+		  Guardian X does more than return information. It processes a
+		  destination through multiple safety stages before Guardian AI
+		  turns the results into clear, practical guidance.
+		</p>
+	  </div>
+
+
+	  <!-- ANALYSIS PIPELINE -->
+
+	  <div class="gx-pipeline">
+
+		<div class="gx-pipeline-line">
+		  <div class="gx-pulse"></div>
+		</div>
+
+		<div class="gx-pipeline-step active">
+		  <div class="gx-step-icon">01</div>
+		  <strong>Location</strong>
+		  <small>Checking</small>
+		</div>
+
+		<div class="gx-pipeline-step active">
+		  <div class="gx-step-icon">02</div>
+		  <strong>Security</strong>
+		  <small>Data</small>
+		</div>
+
+		<div class="gx-pipeline-step active">
+		  <div class="gx-step-icon">03</div>
+		  <strong>Comparison</strong>
+		  <small>Analysis</small>
+		</div>
+
+		<div class="gx-pipeline-step active">
+		  <div class="gx-step-icon">04</div>
+		  <strong>Risk</strong>
+		  <small>Analysis</small>
+		</div>
+
+		<div class="gx-pipeline-step active">
+		  <div class="gx-step-icon">05</div>
+		  <strong>Safety</strong>
+		  <small>Assessment</small>
+		</div>
+
+		<div class="gx-pipeline-step active">
+		  <div class="gx-step-icon">06</div>
+		  <strong>Guardian</strong>
+		  <small>AI response</small>
+		</div>
+
+	  </div>
+
+	
+	  <!-- PRODUCT DEMO -->
+
+	  <div class="gx-demo-grid">
+
+
+		<!-- DESTINATION VERIFICATION -->
+
+		<article class="gx-demo-card gx-destination-card">
+
+		  <div class="gx-card-top">
+			<div>
+			  <span class="gx-mini-label">DESTINATION VERIFICATION</span>
+			  <h3>Guardian X is checking the destination.</h3>
+			</div>
+
+			<span class="gx-live">
+			  <i></i> LIVE
+			</span>
+		  </div>
+
+
+		  <div class="gx-ai-message">
+
+			<div class="gx-ai-avatar">
+			  GX
+			</div>
+
+			<div>
+			  <span class="gx-message-label">
+				GUARDIAN AI
+			  </span>
+
+			  <p>
+				Tell me where you want to go and I’ll check the
+				destination, available safety information,
+				surrounding conditions and relevant travel
+				considerations before giving you a recommendation.
+			  </p>
+			</div>
+
+		  </div>
+
+
+		  <div class="gx-location-input">
+
+			<div class="gx-location-pin">⌖</div>
+
+			<div>
+			  <small>DESTINATION</small>
+			  <strong>Katsina Central Market</strong>
+			</div>
+
+			<span class="gx-check">✓</span>
+
+		  </div>
+
+
+		  <div class="gx-analysis">
+
+			<div class="gx-analysis-head">
+			  <span>ANALYSIS</span>
+			  <span class="gx-scanning">
+				<i></i> Processing
+			  </span>
+			</div>
+
+
+			<div class="gx-analysis-row">
+			  <span class="gx-analysis-icon">⌖</span>
+
+			  <div>
+				<strong>Location verification</strong>
+				<small>Destination identified successfully</small>
+			  </div>
+
+			  <b>✓</b>
+			</div>
+
+
+			<div class="gx-analysis-row">
+			  <span class="gx-analysis-icon">◉</span>
+
+			  <div>
+				<strong>Security information</strong>
+				<small>Collecting available location data</small>
+			  </div>
+
+			  <b class="gx-loader"></b>
+			</div>
+
+
+			<div class="gx-analysis-row">
+			  <span class="gx-analysis-icon">◇</span>
+
+			  <div>
+				<strong>Risk analysis</strong>
+				<small>Comparing relevant conditions</small>
+			  </div>
+
+			  <b class="gx-loader delay"></b>
+			</div>
+
+		  </div>
+
+
+		  <div class="gx-ai-typing">
+
+			<span>Guardian AI</span>
+
+			<div class="gx-dots">
+			  <i></i>
+			  <i></i>
+			  <i></i>
+			</div>
+
+		  </div>
+
+		</article>
+
+
+
+		<!-- SECURITY CHECK -->
+
+		<article class="gx-demo-card gx-security-card">
+
+		  <div class="gx-card-top">
+			<div>
+			  <span class="gx-mini-label">SECURITY ASSESSMENT</span>
+			  <h3>Understand what may matter before you go.</h3>
+			</div>
+
+			<div class="gx-status-ring">
+			  <span></span>
+			</div>
+		  </div>
+
+
+		  <div class="gx-security-score">
+
+			<div class="gx-score-circle">
+			  <div>
+				<strong>72</strong>
+				<small>review</small>
+			  </div>
+			</div>
+
+			<div>
+			  <span class="gx-message-label">
+				SAFETY ASSESSMENT
+			  </span>
+
+			  <h4>Some information needs attention.</h4>
+
+			  <p>
+				Guardian X combines the available security
+				information and surrounding location context
+				before preparing its final response.
+			  </p>
+			</div>
+
+		  </div>
+
+
+		  <div class="gx-info-list">
+
+			<div>
+			  <span>01</span>
+			  <strong>Location data</strong>
+			  <small>Verified</small>
+			</div>
+
+			<div>
+			  <span>02</span>
+			  <strong>Security data</strong>
+			  <small>Reviewed</small>
+			</div>
+
+			<div>
+			  <span>03</span>
+			  <strong>Location comparison</strong>
+			  <small>Completed</small>
+			</div>
+
+			<div>
+			  <span>04</span>
+			  <strong>Risk analysis</strong>
+			  <small>Completed</small>
+			</div>
+
+		  </div>
+
+		</article>
+
+
+
+		<!-- AI RESPONSE -->
+
+		<article class="gx-demo-card gx-response-card">
+
+		  <div class="gx-card-top">
+			<div>
+			  <span class="gx-mini-label">GUARDIAN AI RESPONSE</span>
+			  <h3>Information becomes practical advice.</h3>
+			</div>
+
+			<span class="gx-ai-badge">✦ AI</span>
+		  </div>
+
+
+		  <div class="gx-chat-window">
+
+			<div class="gx-chat assistant">
+
+			  <div class="gx-small-avatar">
+				GX
+			  </div>
+
+			  <div class="gx-chat-bubble">
+
+				<span>Guardian AI</span>
+
+				<p>
+				  I’ve reviewed the destination information
+				  and the available safety context.
+				</p>
+
+			  </div>
+
+			</div>
+
+
+			<div class="gx-chat assistant">
+
+			  <div class="gx-small-avatar">
+				GX
+			  </div>
+
+			  <div class="gx-chat-bubble">
+
+				<span>Guardian AI</span>
+
+				<p>
+				  The destination is approximately
+				  <strong>6.8 km</strong> away. Based on the
+				  available route information, travelling by
+				  road may be more practical than walking.
+				</p>
+
+			  </div>
+
+			</div>
+
+
+			<div class="gx-chat assistant">
+
+			  <div class="gx-small-avatar">
+				GX
+			  </div>
+
+			  <div class="gx-chat-bubble final">
+
+				<span>Guardian AI · Recommendation</span>
+
+				<p>
+				  I recommend checking the latest conditions
+				  before leaving and staying connected with
+				  someone you trust. If the situation changes,
+				  consider an alternative route.
+				</p>
+
+			  </div>
+
+			</div>
+
+		  </div>
+
+
+		  <div class="gx-response-footer">
+
+			<span>
+			  ✓ Assessment complete
+			</span>
+
+			<span>
+			  Guardian X
+			</span>
+
+		  </div>
+
+		</article>
+
+	  </div>
+
+
+	  <!-- EXPLANATION -->
+
+	  <div class="gx-workflow">
+
+		<div class="gx-workflow-copy">
+
+		  <span class="gx-mini-label">
+			THE GUARDIAN X WORKFLOW
+		  </span>
+
+		  <h3>
+			Six stages.
+			<span>One clear response.</span>
+		  </h3>
+
+		  <p>
+			Guardian X separates the safety process into distinct
+			stages. Each stage contributes information to the next,
+			allowing Guardian AI to produce a response based on the
+			complete assessment rather than a single piece of data.
+		  </p>
+
+		</div>
+
+
+		<div class="gx-workflow-list">
+
+		  <div>
+			<b>01</b>
+			<strong>Location Checking</strong>
+			<p>Verifies and identifies the requested destination.</p>
+		  </div>
+
+		  <div>
+			<b>02</b>
+			<strong>Security Data</strong>
+			<p>Collects available safety-related information.</p>
+		  </div>
+
+		  <div>
+			<b>03</b>
+			<strong>Location Comparison</strong>
+			<p>Compares the destination with relevant location information.</p>
+		  </div>
+
+		  <div>
+			<b>04</b>
+			<strong>Risk Analysis</strong>
+			<p>Analyzes identified conditions and potential concerns.</p>
+		  </div>
+
+		  <div>
+			<b>05</b>
+			<strong>Safety Assessment</strong>
+			<p>Builds an overall assessment from the processed information.</p>
+		  </div>
+
+		  <div>
+			<b>06</b>
+			<strong>AI Response</strong>
+			<p>Turns the assessment into understandable guidance and suggestions.</p>
+		  </div>
+
+		</div>
+
+	  </div>
+
+    </div>
+  </section>
+</section>
+	  <!-- FOUNDERS -->
+
+	<section class="section" id="team">
+
+	  <label>THE PEOPLE BEHIND GUARDIAN X</label>
+
+	  <div class="two">
+        <h2>Built with a <i>safety mission.</i></h2>
+
+        <p>
+		  Guardian X is an evolving technology project focused on
+		  practical safety tools for people and communities.
+        </p>
+	  </div>
+
+
+	  <div class="team">
+
+        <!-- FOUNDER 01 -->
+        <div class="team-member">
+
+		  <img
+			src="assets/fu.png"
+			alt="Usman Saleh"
+			class="avatar"
+		  >
+
+		  <div class="team-details">
+
+			<h3>Usman Saleh</h3>
+
+			<b>Founder · Android Developer</b>
+
+			<p>
+			  Product development · Software Developer ·
+			  Safety technology
+			</p>
+
+		  </div>
+
+		  <a
+			href="usman.html"
+			class="team-profile">
+
+			View Profile
+			<span>→</span>
+
+		  </a>
+
+        </div>
+
+
+        <!-- FOUNDER 02 -->
+        <div class="team-member">
+
+		  <img
+			src="assets/fu.png"
+			alt="Founder"
+			class="avatar"
+		  >
+
+		  <div class="team-details">
+
+			<h3>Founder Name</h3>
+
+			<b>Founder · Web Developer</b>
+
+			<p>
+			  Web development · Product technology ·
+			  Safety technology
+			</p>
+
+		  </div>
+
+		  <a
+			href="founder-2.html"
+			class="team-profile">
+
+			View Profile
+			<span>→</span>
+
+		  </a>
+
+        </div>
+
+	  </div>
+
+	</section>
+<section class="download" id="download">
+<div><label>GET GUARDIAN X</label><h2>Take your safety tools<br><i>with you.</i></h2><p>Download the Android application and keep Guardian X close when you need safety awareness, trusted communication and intelligent assistance.</p></div>
+<div class="download-card"><div class="badge">GX</div><h3>Guardian X for Android</h3><p>Official application</p><a class="primary full" href="#" 
+onclick="alert('Download link not available now');return false;">Download app ↓</a></div>
+</section>
+
+<section class="section"><label>OFFICIAL INFORMATION</label>
+<div class="links">
+<a href="pages/app.html"><b>Application</b><small>Product information & availability →</small></a>
+<a href="pages/privacy.html"><b>Privacy Policy</b><small>Information handling →</small></a>
+<a href="pages/terms.html"><b>Terms of Use</b><small>Platform terms →</small></a>
+<a href="pages/contact.html"><b>Contact</b><small>Reach Guardian X →</small></a>
+</div></section>
+</main>
+
+<footer><a class="brand" href="#top"><span>GX</span> Guardian X</a><p>Personal safety technology by Usman Saleh.</p><div><a href="pages/privacy.html">Privacy</a> <a href="pages/terms.html">Terms</a> <a href="pages/contact.html">Contact</a></div></footer>
+
+
+<script src="app.js"></script>
+</body></html>
